@@ -121,18 +121,7 @@ namespace _21_1_6
                     tr = tr.left;
                 }
             }
-            //private static void FindReplacement(Node toDelete, ref Node replacement)
-            //{
-            //    if (replacement.left == null)
-            //    {
-            //        toDelete.inf = replacement.inf;
-            //        replacement = replacement.right;
-            //    }
-            //    else
-            //    {
-            //        FindReplacement(toDelete, ref replacement.left);
-            //    }
-            //}
+           
             public static void Delete(ref Node t, object key)
             {
                 if (t == null)
@@ -172,33 +161,7 @@ namespace _21_1_6
                     }
 
                 }
-                //    if (t == null)
-                //    {
-                //        Console.WriteLine("No item to delete");
-                //        return;
-                //    }
-
-                //    if (((IComparable)(t.inf)).CompareTo(key) > 0)
-                //    {
-                //        Delete(ref t.left, key);
-                //        return;
-                //    }
-                //    if (((IComparable)(t.inf)).CompareTo(key) < 0)
-                //    {
-                //        Delete(ref t.right, key);
-                //        return;
-                //    }
-                //    if (t.left == null)
-                //    {
-                //        t = t.right;
-                //        return;
-                //    }
-                //    if (t.right == null)
-                //    {
-                //        t = t.left;
-                //        return;
-                //    }
-                //    FindReplacement(t, ref t.right);
+             
 
             }
 

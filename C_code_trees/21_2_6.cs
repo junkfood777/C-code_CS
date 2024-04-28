@@ -27,23 +27,6 @@ namespace _21_2_6
             {
                 this.level = level;
             }
-
-            //public static void Add(ref Node r, object nodeInf)
-            //{
-            //    if (r == null)
-            //    {
-            //        r = new Node(nodeInf);
-            //        return;
-            //    }
-            //    if (((IComparable)(r.inf)).CompareTo(nodeInf) > 0)
-            //    {
-            //        Add(ref r.left, nodeInf);
-            //    }
-            //    else
-            //    {
-            //        Add(ref r.right, nodeInf);
-            //    }
-            //}
             public static void Add(ref Node cur, object nodeInf, int level = 1)
             {
                 if (cur == null)
@@ -294,13 +277,6 @@ namespace _21_2_6
                     }
                     tree.InOrder();
 
-                    //int counter = tree.Even_Counter();
-
-                    //WriteLine("Counter: {0} ", counter);
-
-                    //int needeed_level = int.Parse(ReadLine());
-                    //int level = tree.Level_Searcher(needeed_level);
-                    //WriteLine("Count of the level:{0}", level);
 
                     WriteLine("Enter the level:");
                     WriteLine("Count of the level:{0}", tree.Level_Searcher(int.Parse(ReadLine())));
@@ -311,4 +287,3 @@ namespace _21_2_6
 
     }
 }
-//

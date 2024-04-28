@@ -28,22 +28,6 @@ namespace _21_3_4
                 this.level = level;
             }
 
-            //public static void Add(ref Node r, object nodeInf)
-            //{
-            //    if (r == null)
-            //    {
-            //        r = new Node(nodeInf);
-            //        return;
-            //    }
-            //    if (((IComparable)(r.inf)).CompareTo(nodeInf) > 0)
-            //    {
-            //        Add(ref r.left, nodeInf);
-            //    }
-            //    else
-            //    {
-            //        Add(ref r.right, nodeInf);
-            //    }
-            //}
             public static void Add(ref Node cur, object nodeInf, int level = 1)
             {
                 if (cur == null)
@@ -116,27 +100,7 @@ namespace _21_3_4
                     Counter(r.right, ref counter);
                 }
             }
-            //public static void Is_Id_Balanced(Node r, ref bool is_b, Node exp)
-            //{
-            //    if (r != null && is_b == true)
-            //    {
-            //        int counter_r = 0, counter_l = 0;
-            //        //Node exp = null;
-
-            //        Counter(r.right, ref counter_r);
-            //        Counter(r.left, ref counter_l);
-            //        if (Abs(counter_l - counter_r) < 2)
-            //        {
-            //            Is_Id_Balanced(r.left, ref is_b, exp);
-            //            Is_Id_Balanced(r.right, ref is_b, exp);
-            //        }
-            //        else
-            //        {
-            //            is_b = false;
-            //            exp = r;    
-            //        }
-            //    }
-            //}
+           
 
             public static void Is_Id_Balanced(Node r, ref bool is_b)
             {
@@ -186,85 +150,7 @@ namespace _21_3_4
                 }
             }
 
-            //public static bool Is_Possible_Delete(Node mainNode, Node nodeToRemove)
-            //{
-
-
-
-
-
-
-            //    //if (node.left != null && node.right == null)
-            //    //{
-            //    //    // проверяем, является ли левый потомок листом
-            //    //    if (node.left.Left == null && node.left.Right == null)
-            //    //    {
-            //    //        return true;
-            //    //    }
-            //    //    // проверяем, имеет ли левый потомок только одного потомка
-            //    //    else if ((node.Left.Left != null && node.Left.Right == null) || (node.Left.Left == null && node.Left.Right != null))
-            //    //    {
-            //    //        return true;
-            //    //    }
-            //    //}
-            //    //// проверяем, есть ли у узла только правый потомок
-            //    //else if (node.Left == null && node.Right != null)
-            //    //{
-            //    //    // проверяем, является ли правый потомок листом
-            //    //    if (node.Right.Left == null && node.Right.Right == null)
-            //    //    {
-            //    //        return true;
-            //    //    }
-            //    //    // проверяем, имеет ли правый потомок только одного потомка
-            //    //    else if ((node.Right.Left != null && node.Right.Right == null) || (node.Right.Left == null && node.Right.Right != null))
-            //    //    {
-            //    //        return true;
-            //    //    }
-            //    //}
-            //    //// проверяем, есть ли у узла оба потомка
-            //    //else if (node.Left != null && node.Right != null)
-            //    //{
-            //    //    // проверяем, являются ли оба потомка листьями
-            //    //    if (node.Left.Left == null && node.Left.Right == null && node.Right.Left == null && node.Right.Right == null)
-            //    //    {
-            //    //        return true;
-            //    //    }
-            //    //}
-
-            //    //return false;
-
-
-
-            //    //if (nodeToRemove == null) // если узел для удаления не задан, возвращаем false
-            //    //{
-            //    //    return false;
-            //    //}
-
-            //    //if (nodeToRemove.left == null || nodeToRemove.right == null) // если у узла есть меньше двух потомков, то можно его безопасно удалить
-            //    //{
-            //    //    return true;
-            //    //}
-
-            //    //Node r = nodeToRemove;
-
-
-
-            //    // Иначе, находим самый левый узел в правом поддереве или самый правый узел в левом поддереве
-            //    //Node replacementNode = nodeToRemove.right;
-            //    //while (replacementNode.left != null)
-            //    //{
-            //    //    replacementNode = replacementNode.left;
-            //    //}
-
-            //    //// Проверяем, можно ли безопасно удалить найденный узел
-            //    //if (replacementNode.right == null)
-            //    //{
-            //    //    return true;
-            //    //}
-
-            //    //return false;
-            //}
-
+           
 
             public static void Is_Tree_Stay(Node node, Node mainNode, ref bool is_id)
             {
@@ -277,11 +163,7 @@ namespace _21_3_4
                     }
                     else
                     {
-                        //bool is_b = true;
-                        //Is_Id_Balanced(node, ref is_b);
-                        //Is_Id_Balanced(mainNode, ref is_b);
-                        //if (is_b == false)
-                        //{
+                       
                         Node temp = node;
                         node = null;
                         bool is_id_b = true;
@@ -304,25 +186,7 @@ namespace _21_3_4
 
             }
 
-            //public static void Is_Possible_Delete(Node r, ref bool is_p_d)
-            //{
-            //    if (r != null && is_p_d == true)
-            //    {
-            //        int counter_r = 0, counter_l = 0;
-            //        Counter(r.right, ref counter_r);
-            //        Counter(r.left, ref counter_l);
-            //        if (Abs(counter_l - counter_r) < 3)
-            //        {
-            //            Is_Id_Balanced(r.left, ref is_p_d);
-            //            Is_Id_Balanced(r.right, ref is_p_d);
-            //            //value = r.inf;
-            //        }
-            //        else
-            //        {
-            //            is_p_d = false;
-            //        }
-            //    }
-            //}
+            
 
             public static void Level_Searcher(Node cur, ref int answer, in int targetLevel)
             {
@@ -480,25 +344,7 @@ namespace _21_3_4
             Node.Is_Tree_Stay(tree, tree, ref is_id);
             return is_id;
         }
-        //public static void Is_Tree_Stay(Node node, Node mainNode)
-        //{
-        //    if ((node.left != null) && (node.right != null))
-        //    {
-        //        Is_Tree_Stay(node.left, mainNode);
-        //        Is_Tree_Stay(node.right, mainNode);
-        //    }
-        //    else
-        //    {
-
-        //    }
-        //}
-        //public bool Is_Possible_Delete()
-        //{
-        //    bool is_p_d = true;
-
-        //    Node.Is_Possible_Delete(tree, ref is_p_d);
-        //    return is_p_d;
-        //}
+ 
 
         public BinaryTree Search(object key)
         {
@@ -551,13 +397,7 @@ namespace _21_3_4
                     }
                     tree.InOrder();
 
-                    //int counter = tree.Even_Counter();
-
-                    //WriteLine("Counter: {0} ", counter);
-
-                    //int needeed_level = int.Parse(ReadLine());
-                    //int level = tree.Level_Searcher(needeed_level);
-                    //WriteLine("Count of the level:{0}", level);
+               
 
                     WriteLine("Enter the level:");
                     WriteLine("Count of the level:{0}", tree.Level_Searcher(int.Parse(ReadLine())));
@@ -567,7 +407,6 @@ namespace _21_3_4
                     {
                         WriteLine("The tree is already Ideal Balanced");
 
-                        //bool is_id = tree.Is_Tree_Stays();
                     }
                     else
                     {
@@ -577,20 +416,6 @@ namespace _21_3_4
 
 
 
-                        //tree_exp.
-
-
-                        //object value = null;
-
-
-                        //if (tree.Is_Possible_Delete() == true)
-                        //{
-                        //    WriteLine("It is possible to delete one Node to make the Tree Ideal Balanced with the {0} value");
-                        //}
-                        //else
-                        //{
-                        //    WriteLine("It is impossible to Delete");
-                        //}
 
                     }
 
@@ -600,4 +425,3 @@ namespace _21_3_4
 
     }
 }
-//чек изначальное дерево - если true, 
